@@ -1,12 +1,20 @@
-#include <stdio.h>
-#include "main.h"
-int main (void){
-	char str[]  = "_putchar";
-	int i = 8;
+#include <unistd.h>
 
-	for (i = 0; i > 8; i++)
-		putchar(str[i]);
+/**
+ *  * _putchar - writes the character c to stdout
+ *   * @c: The character to print
+ *    *
+ *     * Return: On success 1.
+ *      * On error, -1 is returned, and errno is set appropriately.
+ *       */
+int _putchar(char c)
+{
+		return (write(1, &c, 1));
+}
+int main(){
+	_putchar('_putchar');
+	_putchar('\n');
 
-	putchar('\n');
 	return 0;
+
 };
